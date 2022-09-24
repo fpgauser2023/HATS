@@ -1,0 +1,4 @@
+sigpdf https://arxiv.org/pdf/2001.06370.pdf
+theano https://github.com/Theano/Theano/blob/master/theano/tensor/nnet/sigm.py
+github https://github.com/freechipsproject/chisel-bootcamp
+fixedpoint https://github.com/Xilinx/ml-suite/blob/master/notebooks/integer_quantization.ipynb
