@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root versionMajor="1" versionMinor="6">
+  <kernel name="sigmoid_ufspt" language="ip_c" vlnv="ucr:kernel:sigmoid_krnl:1.0" attributes="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" interrupt="false" hwControlProtocol="ap_ctrl_none">
+    <ports>
+      <port name="m00_axis" mode="write_only" dataWidth="32" portType="stream"/>
+      <port name="s00_axis" mode="read_only" dataWidth="32" portType="stream"/>
+    </ports>
+    <args>
+      <arg name="m00_axis" addressQualifier="4" id="0" port="m00_axis" size="0" offset="0" hostOffset="0" hostSize="0" memSize="0" type="stream&lt;qdma_axis&lt;32,0,0,0>>&amp;" />
+      <arg name="s00_axis" addressQualifier="4" id="1" port="s00_axis" size="0" offset="0" hostOffset="0" hostSize="0" memSize="0" type="stream&lt;qdma_axis&lt;32,0,0,0>>&amp;" />
+    </args>
+  </kernel>
+</root>
