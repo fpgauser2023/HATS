@@ -49,13 +49,14 @@ This repository provides the source code developed for the paper **HATS: Hardwar
 sigmoid implementation options are:
 
 
-|  SIGMOID                   | Desription                                                                         |
-|------------------------|------------------------------|------------------------------------------------------------------------------------|
-| hls        | Ultra-Fast sigmoid implementation in HLS                                                                   |
+|  SIGMOID                   | Description		|
+|----------------------------|--------------------------|
+| hls        | Ultra-Fast sigmoid implementation in HLS             |                                                     
 | spt         | sigmoid piecewise Taylor                                                   |
-| ufspl_multi        | Ultra-Fast sigmoid piecewise linear multi-cycle                       
-| ufspl_pipelined      |  Ultra-Fast sigmoid piecewise linear pipelined               
-|ufspt| Ultra-Fast sigmoid piecewise taylor 
+| ufspl_multi        | Ultra-Fast sigmoid piecewise linear multi-cycle                     |  
+| ufspl_pipelined      |  Ultra-Fast sigmoid piecewise linear pipelined               |
+|ufspt| Ultra-Fast sigmoid piecewise taylor |
+
 Note that 
 - Generated xclbin will be here **${HATS_HOME}/lamp/vitis/DPUCAHX8H_u280/bit_gen/u280.xclbin**.
 - Build runtime is  ~22 hours.
