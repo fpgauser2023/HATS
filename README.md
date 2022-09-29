@@ -30,6 +30,66 @@ This repository provides the source code developed for the paper **HATS: Hardwar
     ├── project                          # Chisel build configurations
     ├── LICENSE
     └── README.md
+
+
+# Creating Hardware Sigmoid Modules
+Before continuing, run `cd hdl/chisel/`.
+
+## Generating a Hardware Module
+Generating a module can be done with the use of the command:
+
+`sbt 'runMain GenerateModule --implementation <implementation> [--regions <regions>] [--order <order>] [--format <integer_width>.<rational_width>]'`
+
+or the short-hand form:
+
+`sbt 'runMain GenerateModule -i <implementation> [-r <regions>] [-o <order>] [-f <integer_width>.<rational_width>]'`
+
+Four arguments are passed into the command proceeding `GenerateModule`.
+These include,
+- `--implementation`/`-i` (*Required*): Select an implementation to generate. Implementations include,
+  - `ufspl-mc`: Ultra-fast Sigmoid Piecewise Linear (Multicycle)
+  - `ufspl-pipe`: Ultra-fast Sigmoid Piecewise Linear (Pipeline)
+  - `ufspt-mc`: Ultra-fast Sigmoid Piecewise Taylor (Multicycle)
+  - `spt-mc`: Sigmoid Piecewise Linear (Multicycle)
+- `--regions`/`-r` (*Optional*): Specify the number of approximations for the inner regions*. Defaults to `2`.
+- `--order`/`-o` (*Optional*): Specify the order of the approximations for the inner regions*. Defaults to `1`.
+- `--format`/`-f` (*Optional*): Specify a fixed-point format in the form `<integer_width>.<fractional_width>`
+eg. `10.15`. Defaults to `5.10`.
+
+> [*] The inner regions span the domain [-3.4, 3.4] for `UFS-Px` approximations, and [-6, 6] for `S-PT`.
+
+## Simulating a Hardware Module
+The simulations generate a test vector spanning the domain [-6, 6] at increments of 1/32.
+Each of these values are mapped to the closest fixed-point representation,
+given `I` integer and `F` fractional bits, then fed to the hardware module.
+The results and their corresponding inputs are stored in `script/output.dat`.
+A separate Python script parses `output.dat`, plotting the results and
+comparing them to a floating-point approximation of the Sigmoid function.
+
+### Running a Simulation
+A Makefile has been added in this directory to simplify the process of
+testing and plotting. There are four commands that can be run, one for each
+implementation.
+- `make sim-ufspl-mc`: Simulate Ultrafast Sigmoid Piecewise Linear (Multicycle)
+- `make sim-ufspl-pipe`: Simulate Ultrafast Sigmoid Piecewise Linear (Pipeline)
+- `make sim-ufspt-mc`: Simulate Ultrafast Sigmoid Piecewise Taylor (Multicycle)
+- `make sim-spt-mc`: Simulate Sigmoid Piecewise Linear (Multicycle)
+
+### Cutomizing a Simulation
+The above section only describes the process of running a simulation with the
+default settings. To adjust these settings, a `simulation_config.txt` file exists
+containing tunable parameters. Among these arguments includes,
+- `FORMAT`: Specify a fixed-point format in the form `<integer_width>.<fractional_width>` eg. `5.7`.
+- `REGIONS`: Specify the number of approximations for the inner regions*.
+- `ORDER`: Specify the order of the approximations for the inner regions*.
+- `TEST_BOUND`: The range of values tested in the simulation. The simulation
+ranges from `[-TEST_BOUND, TEST_BOUND]`.
+- `TEST_RESOLUTION`: The distance between test points is calculated by `2^{-TEST_RESOLUTION}`.
+
+> [*] The inner regions span the domain [-3.4, 3.4] for `UFS-Px` approximations, and [-6, 6] for `S-PT`.
+
+
+
 # LAMP Inference 
 :pushpin: **Note:** This application can be run only on **Alveo  U280** and requires Vivado and Vitis 2021.2 tools.
 ## Generate xclbin

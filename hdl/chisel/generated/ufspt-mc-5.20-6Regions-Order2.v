@@ -1,6 +1,6 @@
 module CheckBoundary(
-  input  [14:0] io_x,
-  input  [14:0] io_B_i,
+  input  [24:0] io_x,
+  input  [24:0] io_B_i,
   output        io_leq_B_i,
   output        io_gt_B_i
 );
@@ -8,53 +8,45 @@ module CheckBoundary(
   assign io_gt_B_i = $signed(io_x) > $signed(io_B_i); // @[Taylor.scala 160:24]
 endmodule
 module BoundarySelect(
-  input  [14:0] io_x,
+  input  [24:0] io_x,
   output [3:0]  io_region
 );
-  wire [14:0] checkBoundaryModules_0_io_x; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_0_io_B_i; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_0_io_x; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_0_io_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_0_io_leq_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_0_io_gt_B_i; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_1_io_x; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_1_io_B_i; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_1_io_x; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_1_io_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_1_io_leq_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_1_io_gt_B_i; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_2_io_x; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_2_io_B_i; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_2_io_x; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_2_io_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_2_io_leq_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_2_io_gt_B_i; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_3_io_x; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_3_io_B_i; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_3_io_x; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_3_io_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_3_io_leq_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_3_io_gt_B_i; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_4_io_x; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_4_io_B_i; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_4_io_x; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_4_io_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_4_io_leq_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_4_io_gt_B_i; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_5_io_x; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_5_io_B_i; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_5_io_x; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_5_io_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_5_io_leq_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_5_io_gt_B_i; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_6_io_x; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_6_io_B_i; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_6_io_x; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_6_io_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_6_io_leq_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_6_io_gt_B_i; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_7_io_x; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_7_io_B_i; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_7_io_x; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_7_io_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_7_io_leq_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_7_io_gt_B_i; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_8_io_x; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_8_io_B_i; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_8_io_x; // @[Taylor.scala 177:40]
+  wire [24:0] checkBoundaryModules_8_io_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_8_io_leq_B_i; // @[Taylor.scala 177:40]
   wire  checkBoundaryModules_8_io_gt_B_i; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_9_io_x; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_9_io_B_i; // @[Taylor.scala 177:40]
-  wire  checkBoundaryModules_9_io_leq_B_i; // @[Taylor.scala 177:40]
-  wire  checkBoundaryModules_9_io_gt_B_i; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_10_io_x; // @[Taylor.scala 177:40]
-  wire [14:0] checkBoundaryModules_10_io_B_i; // @[Taylor.scala 177:40]
-  wire  checkBoundaryModules_10_io_leq_B_i; // @[Taylor.scala 177:40]
-  wire  checkBoundaryModules_10_io_gt_B_i; // @[Taylor.scala 177:40]
   wire  OHencodedIdx_1 = checkBoundaryModules_0_io_gt_B_i & checkBoundaryModules_1_io_leq_B_i; // @[Taylor.scala 190:53]
   wire  OHencodedIdx_2 = checkBoundaryModules_1_io_gt_B_i & checkBoundaryModules_2_io_leq_B_i; // @[Taylor.scala 190:53]
   wire  OHencodedIdx_3 = checkBoundaryModules_2_io_gt_B_i & checkBoundaryModules_3_io_leq_B_i; // @[Taylor.scala 190:53]
@@ -63,16 +55,12 @@ module BoundarySelect(
   wire  OHencodedIdx_6 = checkBoundaryModules_5_io_gt_B_i & checkBoundaryModules_6_io_leq_B_i; // @[Taylor.scala 190:53]
   wire  OHencodedIdx_7 = checkBoundaryModules_6_io_gt_B_i & checkBoundaryModules_7_io_leq_B_i; // @[Taylor.scala 190:53]
   wire  OHencodedIdx_8 = checkBoundaryModules_7_io_gt_B_i & checkBoundaryModules_8_io_leq_B_i; // @[Taylor.scala 190:53]
-  wire  OHencodedIdx_9 = checkBoundaryModules_8_io_gt_B_i & checkBoundaryModules_9_io_leq_B_i; // @[Taylor.scala 190:53]
-  wire  OHencodedIdx_10 = checkBoundaryModules_9_io_gt_B_i & checkBoundaryModules_10_io_leq_B_i; // @[Taylor.scala 190:53]
-  wire [5:0] io_region_lo = {OHencodedIdx_5,OHencodedIdx_4,OHencodedIdx_3,OHencodedIdx_2,OHencodedIdx_1,
-    checkBoundaryModules_0_io_leq_B_i}; // @[Cat.scala 31:58]
-  wire [11:0] _io_region_T = {checkBoundaryModules_10_io_gt_B_i,OHencodedIdx_10,OHencodedIdx_9,OHencodedIdx_8,
-    OHencodedIdx_7,OHencodedIdx_6,io_region_lo}; // @[Cat.scala 31:58]
-  wire [3:0] io_region_hi_1 = _io_region_T[11:8]; // @[OneHot.scala 30:18]
+  wire [9:0] _io_region_T = {checkBoundaryModules_8_io_gt_B_i,OHencodedIdx_8,OHencodedIdx_7,OHencodedIdx_6,
+    OHencodedIdx_5,OHencodedIdx_4,OHencodedIdx_3,OHencodedIdx_2,OHencodedIdx_1,checkBoundaryModules_0_io_leq_B_i}; // @[Cat.scala 31:58]
+  wire [1:0] io_region_hi_1 = _io_region_T[9:8]; // @[OneHot.scala 30:18]
   wire [7:0] io_region_lo_1 = _io_region_T[7:0]; // @[OneHot.scala 31:18]
   wire  _io_region_T_1 = |io_region_hi_1; // @[OneHot.scala 32:14]
-  wire [7:0] _GEN_0 = {{4'd0}, io_region_hi_1}; // @[OneHot.scala 32:28]
+  wire [7:0] _GEN_0 = {{6'd0}, io_region_hi_1}; // @[OneHot.scala 32:28]
   wire [7:0] _io_region_T_2 = _GEN_0 | io_region_lo_1; // @[OneHot.scala 32:28]
   wire [3:0] io_region_hi_2 = _io_region_T_2[7:4]; // @[OneHot.scala 30:18]
   wire [3:0] io_region_lo_2 = _io_region_T_2[3:0]; // @[OneHot.scala 31:18]
@@ -137,99 +125,92 @@ module BoundarySelect(
     .io_leq_B_i(checkBoundaryModules_8_io_leq_B_i),
     .io_gt_B_i(checkBoundaryModules_8_io_gt_B_i)
   );
-  CheckBoundary checkBoundaryModules_9 ( // @[Taylor.scala 177:40]
-    .io_x(checkBoundaryModules_9_io_x),
-    .io_B_i(checkBoundaryModules_9_io_B_i),
-    .io_leq_B_i(checkBoundaryModules_9_io_leq_B_i),
-    .io_gt_B_i(checkBoundaryModules_9_io_gt_B_i)
-  );
-  CheckBoundary checkBoundaryModules_10 ( // @[Taylor.scala 177:40]
-    .io_x(checkBoundaryModules_10_io_x),
-    .io_B_i(checkBoundaryModules_10_io_B_i),
-    .io_leq_B_i(checkBoundaryModules_10_io_leq_B_i),
-    .io_gt_B_i(checkBoundaryModules_10_io_gt_B_i)
-  );
   assign io_region = {_io_region_T_1,_io_region_T_9}; // @[Cat.scala 31:58]
   assign checkBoundaryModules_0_io_x = io_x; // @[Taylor.scala 178:33]
-  assign checkBoundaryModules_0_io_B_i = -15'sh1800; // @[Taylor.scala 179:35]
+  assign checkBoundaryModules_0_io_B_i = -25'sh600000; // @[Taylor.scala 179:35]
   assign checkBoundaryModules_1_io_x = io_x; // @[Taylor.scala 178:33]
-  assign checkBoundaryModules_1_io_B_i = -15'shd9a; // @[Taylor.scala 179:35]
+  assign checkBoundaryModules_1_io_B_i = -25'sh366666; // @[Taylor.scala 179:35]
   assign checkBoundaryModules_2_io_x = io_x; // @[Taylor.scala 178:33]
-  assign checkBoundaryModules_2_io_B_i = -15'sha33; // @[Taylor.scala 179:35]
+  assign checkBoundaryModules_2_io_B_i = -25'sh244444; // @[Taylor.scala 179:35]
   assign checkBoundaryModules_3_io_x = io_x; // @[Taylor.scala 178:33]
-  assign checkBoundaryModules_3_io_B_i = -15'sh6cd; // @[Taylor.scala 179:35]
+  assign checkBoundaryModules_3_io_B_i = -25'sh122222; // @[Taylor.scala 179:35]
   assign checkBoundaryModules_4_io_x = io_x; // @[Taylor.scala 178:33]
-  assign checkBoundaryModules_4_io_B_i = -15'sh366; // @[Taylor.scala 179:35]
+  assign checkBoundaryModules_4_io_B_i = 25'sh0; // @[Taylor.scala 179:35]
   assign checkBoundaryModules_5_io_x = io_x; // @[Taylor.scala 178:33]
-  assign checkBoundaryModules_5_io_B_i = 15'sh0; // @[Taylor.scala 179:35]
+  assign checkBoundaryModules_5_io_B_i = 25'sh122222; // @[Taylor.scala 179:35]
   assign checkBoundaryModules_6_io_x = io_x; // @[Taylor.scala 178:33]
-  assign checkBoundaryModules_6_io_B_i = 15'sh366; // @[Taylor.scala 179:35]
+  assign checkBoundaryModules_6_io_B_i = 25'sh244444; // @[Taylor.scala 179:35]
   assign checkBoundaryModules_7_io_x = io_x; // @[Taylor.scala 178:33]
-  assign checkBoundaryModules_7_io_B_i = 15'sh6cd; // @[Taylor.scala 179:35]
+  assign checkBoundaryModules_7_io_B_i = 25'sh366666; // @[Taylor.scala 179:35]
   assign checkBoundaryModules_8_io_x = io_x; // @[Taylor.scala 178:33]
-  assign checkBoundaryModules_8_io_B_i = 15'sha33; // @[Taylor.scala 179:35]
-  assign checkBoundaryModules_9_io_x = io_x; // @[Taylor.scala 178:33]
-  assign checkBoundaryModules_9_io_B_i = 15'shd9a; // @[Taylor.scala 179:35]
-  assign checkBoundaryModules_10_io_x = io_x; // @[Taylor.scala 178:33]
-  assign checkBoundaryModules_10_io_B_i = 15'sh1800; // @[Taylor.scala 179:35]
+  assign checkBoundaryModules_8_io_B_i = 25'sh600000; // @[Taylor.scala 179:35]
 endmodule
 module ConstantSelect(
-  input  [14:0] io_x,
+  input  [24:0] io_x,
   input  [1:0]  io_order_idx,
-  output [14:0] io_a_select,
-  output [14:0] io_m_select
+  output [24:0] io_a_select,
+  output [24:0] io_m_select
 );
-  wire [14:0] boundarySelect_io_x; // @[Taylor.scala 212:48]
+  wire [24:0] boundarySelect_io_x; // @[Taylor.scala 212:48]
   wire [3:0] boundarySelect_io_region; // @[Taylor.scala 212:48]
-  wire [14:0] _GEN_2 = 4'h2 == boundarySelect_io_region ? $signed(15'shbe6) : $signed(15'sh0); // @[Taylor.scala 223:{17,17}]
-  wire [14:0] _GEN_3 = 4'h3 == boundarySelect_io_region ? $signed(15'sh880) : $signed(_GEN_2); // @[Taylor.scala 223:{17,17}]
-  wire [14:0] _GEN_4 = 4'h4 == boundarySelect_io_region ? $signed(15'sh51a) : $signed(_GEN_3); // @[Taylor.scala 223:{17,17}]
-  wire [14:0] _GEN_5 = 4'h5 == boundarySelect_io_region ? $signed(15'sh1b3) : $signed(_GEN_4); // @[Taylor.scala 223:{17,17}]
-  wire [14:0] _GEN_6 = 4'h6 == boundarySelect_io_region ? $signed(-15'sh1b3) : $signed(_GEN_5); // @[Taylor.scala 223:{17,17}]
-  wire [14:0] _GEN_7 = 4'h7 == boundarySelect_io_region ? $signed(-15'sh51a) : $signed(_GEN_6); // @[Taylor.scala 223:{17,17}]
-  wire [14:0] _GEN_8 = 4'h8 == boundarySelect_io_region ? $signed(-15'sh880) : $signed(_GEN_7); // @[Taylor.scala 223:{17,17}]
-  wire [14:0] _GEN_9 = 4'h9 == boundarySelect_io_region ? $signed(-15'shbe6) : $signed(_GEN_8); // @[Taylor.scala 223:{17,17}]
-  wire [14:0] _GEN_10 = 4'ha == boundarySelect_io_region ? $signed(15'sh0) : $signed(_GEN_9); // @[Taylor.scala 223:{17,17}]
-  wire [14:0] _GEN_13 = 2'h0 == io_order_idx & 4'h1 == boundarySelect_io_region ? $signed(15'sh49) : $signed(15'sh0); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_14 = 2'h0 == io_order_idx & 4'h2 == boundarySelect_io_region ? $signed(15'sh35) : $signed(_GEN_13); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_15 = 2'h0 == io_order_idx & 4'h3 == boundarySelect_io_region ? $signed(15'sh74) : $signed(_GEN_14); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_16 = 2'h0 == io_order_idx & 4'h4 == boundarySelect_io_region ? $signed(15'shd5) : $signed(_GEN_15); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_17 = 2'h0 == io_order_idx & 4'h5 == boundarySelect_io_region ? $signed(15'sh179) : $signed(_GEN_16); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_18 = 2'h0 == io_order_idx & 4'h6 == boundarySelect_io_region ? $signed(15'sh287) : $signed(_GEN_17); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_19 = 2'h0 == io_order_idx & 4'h7 == boundarySelect_io_region ? $signed(15'sh32b) : $signed(_GEN_18); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_20 = 2'h0 == io_order_idx & 4'h8 == boundarySelect_io_region ? $signed(15'sh38c) : $signed(_GEN_19); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_21 = 2'h0 == io_order_idx & 4'h9 == boundarySelect_io_region ? $signed(15'sh3cb) : $signed(_GEN_20); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_22 = 2'h0 == io_order_idx & 4'ha == boundarySelect_io_region ? $signed(15'sh3b7) : $signed(_GEN_21); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_23 = 2'h0 == io_order_idx & 4'hb == boundarySelect_io_region ? $signed(15'sh400) : $signed(_GEN_22); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_24 = 2'h1 == io_order_idx & 4'h0 == boundarySelect_io_region ? $signed(15'sh0) : $signed(_GEN_23); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_25 = 2'h1 == io_order_idx & 4'h1 == boundarySelect_io_region ? $signed(15'shc) : $signed(_GEN_24); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_26 = 2'h1 == io_order_idx & 4'h2 == boundarySelect_io_region ? $signed(15'sh3e) : $signed(_GEN_25); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_27 = 2'h1 == io_order_idx & 4'h3 == boundarySelect_io_region ? $signed(15'sh5a) : $signed(_GEN_26); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_28 = 2'h1 == io_order_idx & 4'h4 == boundarySelect_io_region ? $signed(15'sh8f) : $signed(_GEN_27); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_29 = 2'h1 == io_order_idx & 4'h5 == boundarySelect_io_region ? $signed(15'sh105) : $signed(_GEN_28); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_30 = 2'h1 == io_order_idx & 4'h6 == boundarySelect_io_region ? $signed(15'sh105) : $signed(_GEN_29); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_31 = 2'h1 == io_order_idx & 4'h7 == boundarySelect_io_region ? $signed(15'sh8f) : $signed(_GEN_30); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_32 = 2'h1 == io_order_idx & 4'h8 == boundarySelect_io_region ? $signed(15'sh5a) : $signed(_GEN_31); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_33 = 2'h1 == io_order_idx & 4'h9 == boundarySelect_io_region ? $signed(15'sh3e) : $signed(_GEN_32); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_34 = 2'h1 == io_order_idx & 4'ha == boundarySelect_io_region ? $signed(15'shc) : $signed(_GEN_33); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_35 = 2'h1 == io_order_idx & 4'hb == boundarySelect_io_region ? $signed(15'sh0) : $signed(_GEN_34); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_36 = 2'h2 == io_order_idx & 4'h0 == boundarySelect_io_region ? $signed(15'sh0) : $signed(_GEN_35); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_37 = 2'h2 == io_order_idx & 4'h1 == boundarySelect_io_region ? $signed(15'sh0) : $signed(_GEN_36); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_38 = 2'h2 == io_order_idx & 4'h2 == boundarySelect_io_region ? $signed(15'shc) : $signed(_GEN_37); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_39 = 2'h2 == io_order_idx & 4'h3 == boundarySelect_io_region ? $signed(15'sh16) : $signed(_GEN_38); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_40 = 2'h2 == io_order_idx & 4'h4 == boundarySelect_io_region ? $signed(15'sh2c) : $signed(_GEN_39); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_41 = 2'h2 == io_order_idx & 4'h5 == boundarySelect_io_region ? $signed(15'sh6c) : $signed(_GEN_40); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_42 = 2'h2 == io_order_idx & 4'h6 == boundarySelect_io_region ? $signed(-15'sh6c) : $signed(_GEN_41); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_43 = 2'h2 == io_order_idx & 4'h7 == boundarySelect_io_region ? $signed(-15'sh2c) : $signed(_GEN_42); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_44 = 2'h2 == io_order_idx & 4'h8 == boundarySelect_io_region ? $signed(-15'sh16) : $signed(_GEN_43); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_45 = 2'h2 == io_order_idx & 4'h9 == boundarySelect_io_region ? $signed(-15'shc) : $signed(_GEN_44); // @[Taylor.scala 224:{17,17}]
-  wire [14:0] _GEN_46 = 2'h2 == io_order_idx & 4'ha == boundarySelect_io_region ? $signed(15'sh0) : $signed(_GEN_45); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_2 = 4'h2 == boundarySelect_io_region ? $signed(25'sh2d5555) : $signed(25'sh0); // @[Taylor.scala 223:{17,17}]
+  wire [24:0] _GEN_3 = 4'h3 == boundarySelect_io_region ? $signed(25'sh1b3333) : $signed(_GEN_2); // @[Taylor.scala 223:{17,17}]
+  wire [24:0] _GEN_4 = 4'h4 == boundarySelect_io_region ? $signed(25'sh91111) : $signed(_GEN_3); // @[Taylor.scala 223:{17,17}]
+  wire [24:0] _GEN_5 = 4'h5 == boundarySelect_io_region ? $signed(-25'sh91111) : $signed(_GEN_4); // @[Taylor.scala 223:{17,17}]
+  wire [24:0] _GEN_6 = 4'h6 == boundarySelect_io_region ? $signed(-25'sh1b3333) : $signed(_GEN_5); // @[Taylor.scala 223:{17,17}]
+  wire [24:0] _GEN_7 = 4'h7 == boundarySelect_io_region ? $signed(-25'sh2d5555) : $signed(_GEN_6); // @[Taylor.scala 223:{17,17}]
+  wire [24:0] _GEN_8 = 4'h8 == boundarySelect_io_region ? $signed(25'sh0) : $signed(_GEN_7); // @[Taylor.scala 223:{17,17}]
+  wire [24:0] _GEN_11 = 2'h0 == io_order_idx & 4'h1 == boundarySelect_io_region ? $signed(25'sh12406) : $signed(25'sh0); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_12 = 2'h0 == io_order_idx & 4'h2 == boundarySelect_io_region ? $signed(25'shf72c) : $signed(_GEN_11); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_13 = 2'h0 == io_order_idx & 4'h3 == boundarySelect_io_region ? $signed(25'sh27c8a) : $signed(_GEN_12)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_14 = 2'h0 == io_order_idx & 4'h4 == boundarySelect_io_region ? $signed(25'sh559c4) : $signed(_GEN_13)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_15 = 2'h0 == io_order_idx & 4'h5 == boundarySelect_io_region ? $signed(25'shaa63c) : $signed(_GEN_14)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_16 = 2'h0 == io_order_idx & 4'h6 == boundarySelect_io_region ? $signed(25'shd8376) : $signed(_GEN_15)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_17 = 2'h0 == io_order_idx & 4'h7 == boundarySelect_io_region ? $signed(25'shf08d4) : $signed(_GEN_16)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_18 = 2'h0 == io_order_idx & 4'h8 == boundarySelect_io_region ? $signed(25'shedbfa) : $signed(_GEN_17)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_19 = 2'h0 == io_order_idx & 4'h9 == boundarySelect_io_region ? $signed(25'sh100000) : $signed(_GEN_18
+    ); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_20 = 2'h1 == io_order_idx & 4'h0 == boundarySelect_io_region ? $signed(25'sh0) : $signed(_GEN_19); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_21 = 2'h1 == io_order_idx & 4'h1 == boundarySelect_io_region ? $signed(25'sh2efc) : $signed(_GEN_20); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_22 = 2'h1 == io_order_idx & 4'h2 == boundarySelect_io_region ? $signed(25'sh10700) : $signed(_GEN_21)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_23 = 2'h1 == io_order_idx & 4'h3 == boundarySelect_io_region ? $signed(25'sh1c0cb) : $signed(_GEN_22)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_24 = 2'h1 == io_order_idx & 4'h4 == boundarySelect_io_region ? $signed(25'sh3a4a3) : $signed(_GEN_23)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_25 = 2'h1 == io_order_idx & 4'h5 == boundarySelect_io_region ? $signed(25'sh3a4a3) : $signed(_GEN_24)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_26 = 2'h1 == io_order_idx & 4'h6 == boundarySelect_io_region ? $signed(25'sh1c0cb) : $signed(_GEN_25)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_27 = 2'h1 == io_order_idx & 4'h7 == boundarySelect_io_region ? $signed(25'sh10700) : $signed(_GEN_26)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_28 = 2'h1 == io_order_idx & 4'h8 == boundarySelect_io_region ? $signed(25'sh2efc) : $signed(_GEN_27); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_29 = 2'h1 == io_order_idx & 4'h9 == boundarySelect_io_region ? $signed(25'sh0) : $signed(_GEN_28); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_30 = 2'h2 == io_order_idx & 4'h0 == boundarySelect_io_region ? $signed(25'sh0) : $signed(_GEN_29); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_31 = 2'h2 == io_order_idx & 4'h1 == boundarySelect_io_region ? $signed(25'sh0) : $signed(_GEN_30); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_32 = 2'h2 == io_order_idx & 4'h2 == boundarySelect_io_region ? $signed(25'sh366a) : $signed(_GEN_31); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_33 = 2'h2 == io_order_idx & 4'h3 == boundarySelect_io_region ? $signed(25'sh794c) : $signed(_GEN_32); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_34 = 2'h2 == io_order_idx & 4'h4 == boundarySelect_io_region ? $signed(25'sh16b5d) : $signed(_GEN_33)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_35 = 2'h2 == io_order_idx & 4'h5 == boundarySelect_io_region ? $signed(-25'sh16b5d) : $signed(_GEN_34
+    ); // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_36 = 2'h2 == io_order_idx & 4'h6 == boundarySelect_io_region ? $signed(-25'sh794c) : $signed(_GEN_35)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_37 = 2'h2 == io_order_idx & 4'h7 == boundarySelect_io_region ? $signed(-25'sh366a) : $signed(_GEN_36)
+    ; // @[Taylor.scala 224:{17,17}]
+  wire [24:0] _GEN_38 = 2'h2 == io_order_idx & 4'h8 == boundarySelect_io_region ? $signed(25'sh0) : $signed(_GEN_37); // @[Taylor.scala 224:{17,17}]
   BoundarySelect boundarySelect ( // @[Taylor.scala 212:48]
     .io_x(boundarySelect_io_x),
     .io_region(boundarySelect_io_region)
   );
-  assign io_a_select = 4'hb == boundarySelect_io_region ? $signed(15'sh0) : $signed(_GEN_10); // @[Taylor.scala 223:{17,17}]
-  assign io_m_select = 2'h2 == io_order_idx & 4'hb == boundarySelect_io_region ? $signed(15'sh0) : $signed(_GEN_46); // @[Taylor.scala 224:{17,17}]
+  assign io_a_select = 4'h9 == boundarySelect_io_region ? $signed(25'sh0) : $signed(_GEN_8); // @[Taylor.scala 223:{17,17}]
+  assign io_m_select = 2'h2 == io_order_idx & 4'h9 == boundarySelect_io_region ? $signed(25'sh0) : $signed(_GEN_38); // @[Taylor.scala 224:{17,17}]
   assign boundarySelect_io_x = io_x; // @[Taylor.scala 213:25]
 endmodule
 module TaylorExpansion(
@@ -237,9 +218,9 @@ module TaylorExpansion(
   input         reset,
   input         io_initialize,
   input         io_compute_enable,
-  input  [14:0] io_xa,
-  input  [14:0] io_mrn,
-  output [14:0] io_output
+  input  [24:0] io_xa,
+  input  [24:0] io_mrn,
+  output [24:0] io_output
 );
 `ifdef RANDOMIZE_REG_INIT
   reg [31:0] _RAND_0;
@@ -247,44 +228,44 @@ module TaylorExpansion(
   reg [31:0] _RAND_2;
   reg [31:0] _RAND_3;
 `endif // RANDOMIZE_REG_INIT
-  reg [14:0] processed_input; // @[Taylor.scala 241:40]
-  reg [14:0] exponentiatial_accumulator; // @[Taylor.scala 242:51]
-  reg [14:0] scalar; // @[Taylor.scala 243:31]
-  reg [14:0] product_accumulator; // @[Taylor.scala 244:44]
-  wire [29:0] _product_result_T = $signed(scalar) * $signed(exponentiatial_accumulator); // @[Taylor.scala 251:31]
-  wire [19:0] _product_result_T_1 = _product_result_T[29:10]; // @[Taylor.scala 251:61]
-  wire [29:0] _exponential_accumulator_output_T = $signed(exponentiatial_accumulator) * $signed(processed_input); // @[Taylor.scala 252:67]
-  wire [19:0] _exponential_accumulator_output_T_1 = _exponential_accumulator_output_T[29:10]; // @[Taylor.scala 252:86]
-  wire [14:0] product_result = _product_result_T_1[14:0]; // @[Taylor.scala 248:36 251:20]
-  wire [14:0] _product_accumulator_T_2 = $signed(product_result) + $signed(product_accumulator); // @[Taylor.scala 264:47]
-  wire [14:0] exponential_accumulator_output = _exponential_accumulator_output_T_1[14:0]; // @[Taylor.scala 247:52 252:36]
+  reg [24:0] processed_input; // @[Taylor.scala 241:40]
+  reg [24:0] exponentiatial_accumulator; // @[Taylor.scala 242:51]
+  reg [24:0] scalar; // @[Taylor.scala 243:31]
+  reg [24:0] product_accumulator; // @[Taylor.scala 244:44]
+  wire [49:0] _product_result_T = $signed(scalar) * $signed(exponentiatial_accumulator); // @[Taylor.scala 251:31]
+  wire [29:0] _product_result_T_1 = _product_result_T[49:20]; // @[Taylor.scala 251:61]
+  wire [49:0] _exponential_accumulator_output_T = $signed(exponentiatial_accumulator) * $signed(processed_input); // @[Taylor.scala 252:67]
+  wire [29:0] _exponential_accumulator_output_T_1 = _exponential_accumulator_output_T[49:20]; // @[Taylor.scala 252:86]
+  wire [24:0] product_result = _product_result_T_1[24:0]; // @[Taylor.scala 248:36 251:20]
+  wire [24:0] _product_accumulator_T_2 = $signed(product_result) + $signed(product_accumulator); // @[Taylor.scala 264:47]
+  wire [24:0] exponential_accumulator_output = _exponential_accumulator_output_T_1[24:0]; // @[Taylor.scala 247:52 252:36]
   assign io_output = product_accumulator; // @[Taylor.scala 253:15]
   always @(posedge clock) begin
     if (reset) begin // @[Taylor.scala 241:40]
-      processed_input <= 15'sh0; // @[Taylor.scala 241:40]
+      processed_input <= 25'sh0; // @[Taylor.scala 241:40]
     end else if (io_initialize) begin // @[Taylor.scala 255:26]
       processed_input <= io_xa; // @[Taylor.scala 256:25]
     end
     if (reset) begin // @[Taylor.scala 242:51]
-      exponentiatial_accumulator <= 15'sh0; // @[Taylor.scala 242:51]
+      exponentiatial_accumulator <= 25'sh0; // @[Taylor.scala 242:51]
     end else if (io_initialize) begin // @[Taylor.scala 255:26]
-      exponentiatial_accumulator <= 15'sh400; // @[Taylor.scala 257:36]
+      exponentiatial_accumulator <= 25'sh100000; // @[Taylor.scala 257:36]
     end else if (io_compute_enable) begin // @[Taylor.scala 260:36]
       exponentiatial_accumulator <= exponential_accumulator_output; // @[Taylor.scala 262:36]
     end
     if (reset) begin // @[Taylor.scala 243:31]
-      scalar <= 15'sh0; // @[Taylor.scala 243:31]
+      scalar <= 25'sh0; // @[Taylor.scala 243:31]
     end else if (io_initialize) begin // @[Taylor.scala 255:26]
       scalar <= io_mrn; // @[Taylor.scala 258:16]
     end else if (io_compute_enable) begin // @[Taylor.scala 260:36]
       scalar <= io_mrn; // @[Taylor.scala 263:16]
     end else begin
-      scalar <= 15'sh0; // @[Taylor.scala 268:16]
+      scalar <= 25'sh0; // @[Taylor.scala 268:16]
     end
     if (reset) begin // @[Taylor.scala 244:44]
-      product_accumulator <= 15'sh0; // @[Taylor.scala 244:44]
+      product_accumulator <= 25'sh0; // @[Taylor.scala 244:44]
     end else if (io_initialize) begin // @[Taylor.scala 255:26]
-      product_accumulator <= 15'sh0; // @[Taylor.scala 259:29]
+      product_accumulator <= 25'sh0; // @[Taylor.scala 259:29]
     end else if (io_compute_enable) begin // @[Taylor.scala 260:36]
       product_accumulator <= _product_accumulator_T_2; // @[Taylor.scala 264:29]
     end
@@ -326,13 +307,13 @@ initial begin
     `endif
 `ifdef RANDOMIZE_REG_INIT
   _RAND_0 = {1{`RANDOM}};
-  processed_input = _RAND_0[14:0];
+  processed_input = _RAND_0[24:0];
   _RAND_1 = {1{`RANDOM}};
-  exponentiatial_accumulator = _RAND_1[14:0];
+  exponentiatial_accumulator = _RAND_1[24:0];
   _RAND_2 = {1{`RANDOM}};
-  scalar = _RAND_2[14:0];
+  scalar = _RAND_2[24:0];
   _RAND_3 = {1{`RANDOM}};
-  product_accumulator = _RAND_3[14:0];
+  product_accumulator = _RAND_3[24:0];
 `endif // RANDOMIZE_REG_INIT
   `endif // RANDOMIZE
 end // initial
@@ -344,9 +325,9 @@ endmodule
 module UFSPT(
   input         clock,
   input         reset,
-  input  [14:0] io_input,
+  input  [24:0] io_input,
   input         io_input_valid,
-  output [14:0] io_output,
+  output [24:0] io_output,
   output        io_output_valid,
   output        io_input_ready,
   output [2:0]  io_dbg_state,
@@ -363,21 +344,21 @@ module UFSPT(
   reg [31:0] _RAND_5;
   reg [31:0] _RAND_6;
 `endif // RANDOMIZE_REG_INIT
-  wire [14:0] constantSelect_io_x; // @[Taylor.scala 295:48]
+  wire [24:0] constantSelect_io_x; // @[Taylor.scala 295:48]
   wire [1:0] constantSelect_io_order_idx; // @[Taylor.scala 295:48]
-  wire [14:0] constantSelect_io_a_select; // @[Taylor.scala 295:48]
-  wire [14:0] constantSelect_io_m_select; // @[Taylor.scala 295:48]
+  wire [24:0] constantSelect_io_a_select; // @[Taylor.scala 295:48]
+  wire [24:0] constantSelect_io_m_select; // @[Taylor.scala 295:48]
   wire  taylorExpansion_clock; // @[Taylor.scala 296:50]
   wire  taylorExpansion_reset; // @[Taylor.scala 296:50]
   wire  taylorExpansion_io_initialize; // @[Taylor.scala 296:50]
   wire  taylorExpansion_io_compute_enable; // @[Taylor.scala 296:50]
-  wire [14:0] taylorExpansion_io_xa; // @[Taylor.scala 296:50]
-  wire [14:0] taylorExpansion_io_mrn; // @[Taylor.scala 296:50]
-  wire [14:0] taylorExpansion_io_output; // @[Taylor.scala 296:50]
+  wire [24:0] taylorExpansion_io_xa; // @[Taylor.scala 296:50]
+  wire [24:0] taylorExpansion_io_mrn; // @[Taylor.scala 296:50]
+  wire [24:0] taylorExpansion_io_output; // @[Taylor.scala 296:50]
   reg [1:0] current_state; // @[Taylor.scala 292:38]
   reg  input_ready_reg; // @[Taylor.scala 299:40]
   reg  output_valid_reg; // @[Taylor.scala 300:41]
-  reg [14:0] input_reg; // @[Taylor.scala 301:34]
+  reg [24:0] input_reg; // @[Taylor.scala 301:34]
   reg [1:0] m_order_idx; // @[Taylor.scala 302:36]
   reg  initialize_taylor_reg; // @[Taylor.scala 305:46]
   reg  compute_enable_taylor_reg; // @[Taylor.scala 306:50]
@@ -446,7 +427,7 @@ module UFSPT(
       output_valid_reg <= _GEN_18;
     end
     if (reset) begin // @[Taylor.scala 301:34]
-      input_reg <= 15'sh0; // @[Taylor.scala 301:34]
+      input_reg <= 25'sh0; // @[Taylor.scala 301:34]
     end else if (!(_T)) begin // @[Taylor.scala 331:28]
       if (_T_2) begin // @[Taylor.scala 331:28]
         input_reg <= io_input; // @[Taylor.scala 343:23]
@@ -521,7 +502,7 @@ initial begin
   _RAND_2 = {1{`RANDOM}};
   output_valid_reg = _RAND_2[0:0];
   _RAND_3 = {1{`RANDOM}};
-  input_reg = _RAND_3[14:0];
+  input_reg = _RAND_3[24:0];
   _RAND_4 = {1{`RANDOM}};
   m_order_idx = _RAND_4[1:0];
   _RAND_5 = {1{`RANDOM}};

@@ -2,7 +2,7 @@ circuit UFSPT :
   module CheckBoundary :
     input clock : Clock
     input reset : Reset
-    output io : { flip x : SInt<15>, flip B_i : SInt<15>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
+    output io : { flip x : SInt<25>, flip B_i : SInt<25>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
 
     node _io_leq_B_i_T = leq(io.x, io.B_i) @[Taylor.scala 159:25]
     io.leq_B_i <= _io_leq_B_i_T @[Taylor.scala 159:16]
@@ -12,7 +12,7 @@ circuit UFSPT :
   module CheckBoundary_1 :
     input clock : Clock
     input reset : Reset
-    output io : { flip x : SInt<15>, flip B_i : SInt<15>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
+    output io : { flip x : SInt<25>, flip B_i : SInt<25>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
 
     node _io_leq_B_i_T = leq(io.x, io.B_i) @[Taylor.scala 159:25]
     io.leq_B_i <= _io_leq_B_i_T @[Taylor.scala 159:16]
@@ -22,7 +22,7 @@ circuit UFSPT :
   module CheckBoundary_2 :
     input clock : Clock
     input reset : Reset
-    output io : { flip x : SInt<15>, flip B_i : SInt<15>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
+    output io : { flip x : SInt<25>, flip B_i : SInt<25>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
 
     node _io_leq_B_i_T = leq(io.x, io.B_i) @[Taylor.scala 159:25]
     io.leq_B_i <= _io_leq_B_i_T @[Taylor.scala 159:16]
@@ -32,7 +32,7 @@ circuit UFSPT :
   module CheckBoundary_3 :
     input clock : Clock
     input reset : Reset
-    output io : { flip x : SInt<15>, flip B_i : SInt<15>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
+    output io : { flip x : SInt<25>, flip B_i : SInt<25>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
 
     node _io_leq_B_i_T = leq(io.x, io.B_i) @[Taylor.scala 159:25]
     io.leq_B_i <= _io_leq_B_i_T @[Taylor.scala 159:16]
@@ -42,7 +42,7 @@ circuit UFSPT :
   module CheckBoundary_4 :
     input clock : Clock
     input reset : Reset
-    output io : { flip x : SInt<15>, flip B_i : SInt<15>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
+    output io : { flip x : SInt<25>, flip B_i : SInt<25>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
 
     node _io_leq_B_i_T = leq(io.x, io.B_i) @[Taylor.scala 159:25]
     io.leq_B_i <= _io_leq_B_i_T @[Taylor.scala 159:16]
@@ -52,7 +52,7 @@ circuit UFSPT :
   module CheckBoundary_5 :
     input clock : Clock
     input reset : Reset
-    output io : { flip x : SInt<15>, flip B_i : SInt<15>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
+    output io : { flip x : SInt<25>, flip B_i : SInt<25>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
 
     node _io_leq_B_i_T = leq(io.x, io.B_i) @[Taylor.scala 159:25]
     io.leq_B_i <= _io_leq_B_i_T @[Taylor.scala 159:16]
@@ -62,7 +62,7 @@ circuit UFSPT :
   module CheckBoundary_6 :
     input clock : Clock
     input reset : Reset
-    output io : { flip x : SInt<15>, flip B_i : SInt<15>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
+    output io : { flip x : SInt<25>, flip B_i : SInt<25>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
 
     node _io_leq_B_i_T = leq(io.x, io.B_i) @[Taylor.scala 159:25]
     io.leq_B_i <= _io_leq_B_i_T @[Taylor.scala 159:16]
@@ -72,7 +72,7 @@ circuit UFSPT :
   module CheckBoundary_7 :
     input clock : Clock
     input reset : Reset
-    output io : { flip x : SInt<15>, flip B_i : SInt<15>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
+    output io : { flip x : SInt<25>, flip B_i : SInt<25>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
 
     node _io_leq_B_i_T = leq(io.x, io.B_i) @[Taylor.scala 159:25]
     io.leq_B_i <= _io_leq_B_i_T @[Taylor.scala 159:16]
@@ -82,27 +82,7 @@ circuit UFSPT :
   module CheckBoundary_8 :
     input clock : Clock
     input reset : Reset
-    output io : { flip x : SInt<15>, flip B_i : SInt<15>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
-
-    node _io_leq_B_i_T = leq(io.x, io.B_i) @[Taylor.scala 159:25]
-    io.leq_B_i <= _io_leq_B_i_T @[Taylor.scala 159:16]
-    node _io_gt_B_i_T = gt(io.x, io.B_i) @[Taylor.scala 160:24]
-    io.gt_B_i <= _io_gt_B_i_T @[Taylor.scala 160:15]
-
-  module CheckBoundary_9 :
-    input clock : Clock
-    input reset : Reset
-    output io : { flip x : SInt<15>, flip B_i : SInt<15>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
-
-    node _io_leq_B_i_T = leq(io.x, io.B_i) @[Taylor.scala 159:25]
-    io.leq_B_i <= _io_leq_B_i_T @[Taylor.scala 159:16]
-    node _io_gt_B_i_T = gt(io.x, io.B_i) @[Taylor.scala 160:24]
-    io.gt_B_i <= _io_gt_B_i_T @[Taylor.scala 160:15]
-
-  module CheckBoundary_10 :
-    input clock : Clock
-    input reset : Reset
-    output io : { flip x : SInt<15>, flip B_i : SInt<15>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
+    output io : { flip x : SInt<25>, flip B_i : SInt<25>, leq_B_i : UInt<1>, gt_B_i : UInt<1>}
 
     node _io_leq_B_i_T = leq(io.x, io.B_i) @[Taylor.scala 159:25]
     io.leq_B_i <= _io_leq_B_i_T @[Taylor.scala 159:16]
@@ -112,21 +92,19 @@ circuit UFSPT :
   module BoundarySelect :
     input clock : Clock
     input reset : Reset
-    output io : { flip x : SInt<15>, region : UInt<4>}
+    output io : { flip x : SInt<25>, region : UInt<4>}
 
-    wire _boundary_vector_WIRE : SInt<15>[11] @[Taylor.scala 172:53]
-    _boundary_vector_WIRE[0] <= asSInt(UInt<15>("h6800")) @[Taylor.scala 172:53]
-    _boundary_vector_WIRE[1] <= asSInt(UInt<15>("h7266")) @[Taylor.scala 172:53]
-    _boundary_vector_WIRE[2] <= asSInt(UInt<15>("h75cd")) @[Taylor.scala 172:53]
-    _boundary_vector_WIRE[3] <= asSInt(UInt<15>("h7933")) @[Taylor.scala 172:53]
-    _boundary_vector_WIRE[4] <= asSInt(UInt<15>("h7c9a")) @[Taylor.scala 172:53]
-    _boundary_vector_WIRE[5] <= asSInt(UInt<15>("h0")) @[Taylor.scala 172:53]
-    _boundary_vector_WIRE[6] <= asSInt(UInt<15>("h366")) @[Taylor.scala 172:53]
-    _boundary_vector_WIRE[7] <= asSInt(UInt<15>("h6cd")) @[Taylor.scala 172:53]
-    _boundary_vector_WIRE[8] <= asSInt(UInt<15>("ha33")) @[Taylor.scala 172:53]
-    _boundary_vector_WIRE[9] <= asSInt(UInt<15>("hd9a")) @[Taylor.scala 172:53]
-    _boundary_vector_WIRE[10] <= asSInt(UInt<15>("h1800")) @[Taylor.scala 172:53]
-    reg boundary_vector : SInt<15>[11], clock with :
+    wire _boundary_vector_WIRE : SInt<25>[9] @[Taylor.scala 172:53]
+    _boundary_vector_WIRE[0] <= asSInt(UInt<25>("h1a00000")) @[Taylor.scala 172:53]
+    _boundary_vector_WIRE[1] <= asSInt(UInt<25>("h1c9999a")) @[Taylor.scala 172:53]
+    _boundary_vector_WIRE[2] <= asSInt(UInt<25>("h1dbbbbc")) @[Taylor.scala 172:53]
+    _boundary_vector_WIRE[3] <= asSInt(UInt<25>("h1edddde")) @[Taylor.scala 172:53]
+    _boundary_vector_WIRE[4] <= asSInt(UInt<25>("h0")) @[Taylor.scala 172:53]
+    _boundary_vector_WIRE[5] <= asSInt(UInt<25>("h122222")) @[Taylor.scala 172:53]
+    _boundary_vector_WIRE[6] <= asSInt(UInt<25>("h244444")) @[Taylor.scala 172:53]
+    _boundary_vector_WIRE[7] <= asSInt(UInt<25>("h366666")) @[Taylor.scala 172:53]
+    _boundary_vector_WIRE[8] <= asSInt(UInt<25>("h600000")) @[Taylor.scala 172:53]
+    reg boundary_vector : SInt<25>[9], clock with :
       reset => (reset, _boundary_vector_WIRE) @[Taylor.scala 172:45]
     inst checkBoundaryModules_0 of CheckBoundary @[Taylor.scala 177:40]
     checkBoundaryModules_0.clock <= clock
@@ -173,16 +151,6 @@ circuit UFSPT :
     checkBoundaryModules_8.reset <= reset
     checkBoundaryModules_8.io.x <= io.x @[Taylor.scala 178:33]
     checkBoundaryModules_8.io.B_i <= boundary_vector[8] @[Taylor.scala 179:35]
-    inst checkBoundaryModules_9 of CheckBoundary_9 @[Taylor.scala 177:40]
-    checkBoundaryModules_9.clock <= clock
-    checkBoundaryModules_9.reset <= reset
-    checkBoundaryModules_9.io.x <= io.x @[Taylor.scala 178:33]
-    checkBoundaryModules_9.io.B_i <= boundary_vector[9] @[Taylor.scala 179:35]
-    inst checkBoundaryModules_10 of CheckBoundary_10 @[Taylor.scala 177:40]
-    checkBoundaryModules_10.clock <= clock
-    checkBoundaryModules_10.reset <= reset
-    checkBoundaryModules_10.io.x <= io.x @[Taylor.scala 178:33]
-    checkBoundaryModules_10.io.B_i <= boundary_vector[10] @[Taylor.scala 179:35]
     node OHencodedIdx_1 = and(checkBoundaryModules_0.io.gt_B_i, checkBoundaryModules_1.io.leq_B_i) @[Taylor.scala 190:53]
     node OHencodedIdx_2 = and(checkBoundaryModules_1.io.gt_B_i, checkBoundaryModules_2.io.leq_B_i) @[Taylor.scala 190:53]
     node OHencodedIdx_3 = and(checkBoundaryModules_2.io.gt_B_i, checkBoundaryModules_3.io.leq_B_i) @[Taylor.scala 190:53]
@@ -191,20 +159,16 @@ circuit UFSPT :
     node OHencodedIdx_6 = and(checkBoundaryModules_5.io.gt_B_i, checkBoundaryModules_6.io.leq_B_i) @[Taylor.scala 190:53]
     node OHencodedIdx_7 = and(checkBoundaryModules_6.io.gt_B_i, checkBoundaryModules_7.io.leq_B_i) @[Taylor.scala 190:53]
     node OHencodedIdx_8 = and(checkBoundaryModules_7.io.gt_B_i, checkBoundaryModules_8.io.leq_B_i) @[Taylor.scala 190:53]
-    node OHencodedIdx_9 = and(checkBoundaryModules_8.io.gt_B_i, checkBoundaryModules_9.io.leq_B_i) @[Taylor.scala 190:53]
-    node OHencodedIdx_10 = and(checkBoundaryModules_9.io.gt_B_i, checkBoundaryModules_10.io.leq_B_i) @[Taylor.scala 190:53]
-    node io_region_lo_lo_hi = cat(OHencodedIdx_2, OHencodedIdx_1) @[Cat.scala 31:58]
-    node io_region_lo_lo = cat(io_region_lo_lo_hi, checkBoundaryModules_0.io.leq_B_i) @[Cat.scala 31:58]
-    node io_region_lo_hi_hi = cat(OHencodedIdx_5, OHencodedIdx_4) @[Cat.scala 31:58]
-    node io_region_lo_hi = cat(io_region_lo_hi_hi, OHencodedIdx_3) @[Cat.scala 31:58]
+    node io_region_lo_lo = cat(OHencodedIdx_1, checkBoundaryModules_0.io.leq_B_i) @[Cat.scala 31:58]
+    node io_region_lo_hi_hi = cat(OHencodedIdx_4, OHencodedIdx_3) @[Cat.scala 31:58]
+    node io_region_lo_hi = cat(io_region_lo_hi_hi, OHencodedIdx_2) @[Cat.scala 31:58]
     node io_region_lo = cat(io_region_lo_hi, io_region_lo_lo) @[Cat.scala 31:58]
-    node io_region_hi_lo_hi = cat(OHencodedIdx_8, OHencodedIdx_7) @[Cat.scala 31:58]
-    node io_region_hi_lo = cat(io_region_hi_lo_hi, OHencodedIdx_6) @[Cat.scala 31:58]
-    node io_region_hi_hi_hi = cat(checkBoundaryModules_10.io.gt_B_i, OHencodedIdx_10) @[Cat.scala 31:58]
-    node io_region_hi_hi = cat(io_region_hi_hi_hi, OHencodedIdx_9) @[Cat.scala 31:58]
+    node io_region_hi_lo = cat(OHencodedIdx_6, OHencodedIdx_5) @[Cat.scala 31:58]
+    node io_region_hi_hi_hi = cat(checkBoundaryModules_8.io.gt_B_i, OHencodedIdx_8) @[Cat.scala 31:58]
+    node io_region_hi_hi = cat(io_region_hi_hi_hi, OHencodedIdx_7) @[Cat.scala 31:58]
     node io_region_hi = cat(io_region_hi_hi, io_region_hi_lo) @[Cat.scala 31:58]
     node _io_region_T = cat(io_region_hi, io_region_lo) @[Cat.scala 31:58]
-    node io_region_hi_1 = bits(_io_region_T, 11, 8) @[OneHot.scala 30:18]
+    node io_region_hi_1 = bits(_io_region_T, 9, 8) @[OneHot.scala 30:18]
     node io_region_lo_1 = bits(_io_region_T, 7, 0) @[OneHot.scala 31:18]
     node _io_region_T_1 = orr(io_region_hi_1) @[OneHot.scala 32:14]
     node _io_region_T_2 = or(io_region_hi_1, io_region_lo_1) @[OneHot.scala 32:28]
@@ -225,63 +189,55 @@ circuit UFSPT :
   module ConstantSelect :
     input clock : Clock
     input reset : Reset
-    output io : { flip x : SInt<15>, flip order_idx : UInt<2>, a_select : SInt<15>, m_select : SInt<15>}
+    output io : { flip x : SInt<25>, flip order_idx : UInt<2>, a_select : SInt<25>, m_select : SInt<25>}
 
     inst boundarySelect of BoundarySelect @[Taylor.scala 212:48]
     boundarySelect.clock <= clock
     boundarySelect.reset <= reset
     boundarySelect.io.x <= io.x @[Taylor.scala 213:25]
-    wire m_vector : SInt<15>[12][3] @[Taylor.scala 216:117]
-    m_vector[0][0] <= asSInt(UInt<15>("h0")) @[Taylor.scala 216:117]
-    m_vector[0][1] <= asSInt(UInt<15>("h49")) @[Taylor.scala 216:117]
-    m_vector[0][2] <= asSInt(UInt<15>("h35")) @[Taylor.scala 216:117]
-    m_vector[0][3] <= asSInt(UInt<15>("h74")) @[Taylor.scala 216:117]
-    m_vector[0][4] <= asSInt(UInt<15>("hd5")) @[Taylor.scala 216:117]
-    m_vector[0][5] <= asSInt(UInt<15>("h179")) @[Taylor.scala 216:117]
-    m_vector[0][6] <= asSInt(UInt<15>("h287")) @[Taylor.scala 216:117]
-    m_vector[0][7] <= asSInt(UInt<15>("h32b")) @[Taylor.scala 216:117]
-    m_vector[0][8] <= asSInt(UInt<15>("h38c")) @[Taylor.scala 216:117]
-    m_vector[0][9] <= asSInt(UInt<15>("h3cb")) @[Taylor.scala 216:117]
-    m_vector[0][10] <= asSInt(UInt<15>("h3b7")) @[Taylor.scala 216:117]
-    m_vector[0][11] <= asSInt(UInt<15>("h400")) @[Taylor.scala 216:117]
-    m_vector[1][0] <= asSInt(UInt<15>("h0")) @[Taylor.scala 216:117]
-    m_vector[1][1] <= asSInt(UInt<15>("hc")) @[Taylor.scala 216:117]
-    m_vector[1][2] <= asSInt(UInt<15>("h3e")) @[Taylor.scala 216:117]
-    m_vector[1][3] <= asSInt(UInt<15>("h5a")) @[Taylor.scala 216:117]
-    m_vector[1][4] <= asSInt(UInt<15>("h8f")) @[Taylor.scala 216:117]
-    m_vector[1][5] <= asSInt(UInt<15>("h105")) @[Taylor.scala 216:117]
-    m_vector[1][6] <= asSInt(UInt<15>("h105")) @[Taylor.scala 216:117]
-    m_vector[1][7] <= asSInt(UInt<15>("h8f")) @[Taylor.scala 216:117]
-    m_vector[1][8] <= asSInt(UInt<15>("h5a")) @[Taylor.scala 216:117]
-    m_vector[1][9] <= asSInt(UInt<15>("h3e")) @[Taylor.scala 216:117]
-    m_vector[1][10] <= asSInt(UInt<15>("hc")) @[Taylor.scala 216:117]
-    m_vector[1][11] <= asSInt(UInt<15>("h0")) @[Taylor.scala 216:117]
-    m_vector[2][0] <= asSInt(UInt<15>("h0")) @[Taylor.scala 216:117]
-    m_vector[2][1] <= asSInt(UInt<15>("h0")) @[Taylor.scala 216:117]
-    m_vector[2][2] <= asSInt(UInt<15>("hc")) @[Taylor.scala 216:117]
-    m_vector[2][3] <= asSInt(UInt<15>("h16")) @[Taylor.scala 216:117]
-    m_vector[2][4] <= asSInt(UInt<15>("h2c")) @[Taylor.scala 216:117]
-    m_vector[2][5] <= asSInt(UInt<15>("h6c")) @[Taylor.scala 216:117]
-    m_vector[2][6] <= asSInt(UInt<15>("h7f94")) @[Taylor.scala 216:117]
-    m_vector[2][7] <= asSInt(UInt<15>("h7fd4")) @[Taylor.scala 216:117]
-    m_vector[2][8] <= asSInt(UInt<15>("h7fea")) @[Taylor.scala 216:117]
-    m_vector[2][9] <= asSInt(UInt<15>("h7ff4")) @[Taylor.scala 216:117]
-    m_vector[2][10] <= asSInt(UInt<15>("h0")) @[Taylor.scala 216:117]
-    m_vector[2][11] <= asSInt(UInt<15>("h0")) @[Taylor.scala 216:117]
-    wire _a_vector_WIRE : SInt<15>[12] @[Taylor.scala 219:46]
-    _a_vector_WIRE[0] <= asSInt(UInt<15>("h0")) @[Taylor.scala 219:46]
-    _a_vector_WIRE[1] <= asSInt(UInt<15>("h0")) @[Taylor.scala 219:46]
-    _a_vector_WIRE[2] <= asSInt(UInt<15>("hbe6")) @[Taylor.scala 219:46]
-    _a_vector_WIRE[3] <= asSInt(UInt<15>("h880")) @[Taylor.scala 219:46]
-    _a_vector_WIRE[4] <= asSInt(UInt<15>("h51a")) @[Taylor.scala 219:46]
-    _a_vector_WIRE[5] <= asSInt(UInt<15>("h1b3")) @[Taylor.scala 219:46]
-    _a_vector_WIRE[6] <= asSInt(UInt<15>("h7e4d")) @[Taylor.scala 219:46]
-    _a_vector_WIRE[7] <= asSInt(UInt<15>("h7ae6")) @[Taylor.scala 219:46]
-    _a_vector_WIRE[8] <= asSInt(UInt<15>("h7780")) @[Taylor.scala 219:46]
-    _a_vector_WIRE[9] <= asSInt(UInt<15>("h741a")) @[Taylor.scala 219:46]
-    _a_vector_WIRE[10] <= asSInt(UInt<15>("h0")) @[Taylor.scala 219:46]
-    _a_vector_WIRE[11] <= asSInt(UInt<15>("h0")) @[Taylor.scala 219:46]
-    reg a_vector : SInt<15>[12], clock with :
+    wire m_vector : SInt<25>[10][3] @[Taylor.scala 216:117]
+    m_vector[0][0] <= asSInt(UInt<25>("h0")) @[Taylor.scala 216:117]
+    m_vector[0][1] <= asSInt(UInt<25>("h12406")) @[Taylor.scala 216:117]
+    m_vector[0][2] <= asSInt(UInt<25>("hf72c")) @[Taylor.scala 216:117]
+    m_vector[0][3] <= asSInt(UInt<25>("h27c8a")) @[Taylor.scala 216:117]
+    m_vector[0][4] <= asSInt(UInt<25>("h559c4")) @[Taylor.scala 216:117]
+    m_vector[0][5] <= asSInt(UInt<25>("haa63c")) @[Taylor.scala 216:117]
+    m_vector[0][6] <= asSInt(UInt<25>("hd8376")) @[Taylor.scala 216:117]
+    m_vector[0][7] <= asSInt(UInt<25>("hf08d4")) @[Taylor.scala 216:117]
+    m_vector[0][8] <= asSInt(UInt<25>("hedbfa")) @[Taylor.scala 216:117]
+    m_vector[0][9] <= asSInt(UInt<25>("h100000")) @[Taylor.scala 216:117]
+    m_vector[1][0] <= asSInt(UInt<25>("h0")) @[Taylor.scala 216:117]
+    m_vector[1][1] <= asSInt(UInt<25>("h2efc")) @[Taylor.scala 216:117]
+    m_vector[1][2] <= asSInt(UInt<25>("h10700")) @[Taylor.scala 216:117]
+    m_vector[1][3] <= asSInt(UInt<25>("h1c0cb")) @[Taylor.scala 216:117]
+    m_vector[1][4] <= asSInt(UInt<25>("h3a4a3")) @[Taylor.scala 216:117]
+    m_vector[1][5] <= asSInt(UInt<25>("h3a4a3")) @[Taylor.scala 216:117]
+    m_vector[1][6] <= asSInt(UInt<25>("h1c0cb")) @[Taylor.scala 216:117]
+    m_vector[1][7] <= asSInt(UInt<25>("h10700")) @[Taylor.scala 216:117]
+    m_vector[1][8] <= asSInt(UInt<25>("h2efc")) @[Taylor.scala 216:117]
+    m_vector[1][9] <= asSInt(UInt<25>("h0")) @[Taylor.scala 216:117]
+    m_vector[2][0] <= asSInt(UInt<25>("h0")) @[Taylor.scala 216:117]
+    m_vector[2][1] <= asSInt(UInt<25>("h0")) @[Taylor.scala 216:117]
+    m_vector[2][2] <= asSInt(UInt<25>("h366a")) @[Taylor.scala 216:117]
+    m_vector[2][3] <= asSInt(UInt<25>("h794c")) @[Taylor.scala 216:117]
+    m_vector[2][4] <= asSInt(UInt<25>("h16b5d")) @[Taylor.scala 216:117]
+    m_vector[2][5] <= asSInt(UInt<25>("h1fe94a3")) @[Taylor.scala 216:117]
+    m_vector[2][6] <= asSInt(UInt<25>("h1ff86b4")) @[Taylor.scala 216:117]
+    m_vector[2][7] <= asSInt(UInt<25>("h1ffc996")) @[Taylor.scala 216:117]
+    m_vector[2][8] <= asSInt(UInt<25>("h0")) @[Taylor.scala 216:117]
+    m_vector[2][9] <= asSInt(UInt<25>("h0")) @[Taylor.scala 216:117]
+    wire _a_vector_WIRE : SInt<25>[10] @[Taylor.scala 219:46]
+    _a_vector_WIRE[0] <= asSInt(UInt<25>("h0")) @[Taylor.scala 219:46]
+    _a_vector_WIRE[1] <= asSInt(UInt<25>("h0")) @[Taylor.scala 219:46]
+    _a_vector_WIRE[2] <= asSInt(UInt<25>("h2d5555")) @[Taylor.scala 219:46]
+    _a_vector_WIRE[3] <= asSInt(UInt<25>("h1b3333")) @[Taylor.scala 219:46]
+    _a_vector_WIRE[4] <= asSInt(UInt<25>("h91111")) @[Taylor.scala 219:46]
+    _a_vector_WIRE[5] <= asSInt(UInt<25>("h1f6eeef")) @[Taylor.scala 219:46]
+    _a_vector_WIRE[6] <= asSInt(UInt<25>("h1e4cccd")) @[Taylor.scala 219:46]
+    _a_vector_WIRE[7] <= asSInt(UInt<25>("h1d2aaab")) @[Taylor.scala 219:46]
+    _a_vector_WIRE[8] <= asSInt(UInt<25>("h0")) @[Taylor.scala 219:46]
+    _a_vector_WIRE[9] <= asSInt(UInt<25>("h0")) @[Taylor.scala 219:46]
+    reg a_vector : SInt<25>[10], clock with :
       reset => (reset, _a_vector_WIRE) @[Taylor.scala 219:38]
     io.a_select <= a_vector[boundarySelect.io.region] @[Taylor.scala 223:17]
     io.m_select <= m_vector[io.order_idx][boundarySelect.io.region] @[Taylor.scala 224:17]
@@ -289,28 +245,28 @@ circuit UFSPT :
   module TaylorExpansion :
     input clock : Clock
     input reset : Reset
-    output io : { flip initialize : UInt<1>, flip compute_enable : UInt<1>, flip xa : SInt<15>, flip mrn : SInt<15>, output : SInt<15>}
+    output io : { flip initialize : UInt<1>, flip compute_enable : UInt<1>, flip xa : SInt<25>, flip mrn : SInt<25>, output : SInt<25>}
 
-    reg processed_input : SInt<15>, clock with :
-      reset => (reset, asSInt(UInt<15>("h0"))) @[Taylor.scala 241:40]
-    reg exponentiatial_accumulator : SInt<15>, clock with :
-      reset => (reset, asSInt(UInt<15>("h0"))) @[Taylor.scala 242:51]
-    reg scalar : SInt<15>, clock with :
-      reset => (reset, asSInt(UInt<15>("h0"))) @[Taylor.scala 243:31]
-    reg product_accumulator : SInt<15>, clock with :
-      reset => (reset, asSInt(UInt<15>("h0"))) @[Taylor.scala 244:44]
-    wire exponential_accumulator_output : SInt<15> @[Taylor.scala 247:52]
-    wire product_result : SInt<15> @[Taylor.scala 248:36]
+    reg processed_input : SInt<25>, clock with :
+      reset => (reset, asSInt(UInt<25>("h0"))) @[Taylor.scala 241:40]
+    reg exponentiatial_accumulator : SInt<25>, clock with :
+      reset => (reset, asSInt(UInt<25>("h0"))) @[Taylor.scala 242:51]
+    reg scalar : SInt<25>, clock with :
+      reset => (reset, asSInt(UInt<25>("h0"))) @[Taylor.scala 243:31]
+    reg product_accumulator : SInt<25>, clock with :
+      reset => (reset, asSInt(UInt<25>("h0"))) @[Taylor.scala 244:44]
+    wire exponential_accumulator_output : SInt<25> @[Taylor.scala 247:52]
+    wire product_result : SInt<25> @[Taylor.scala 248:36]
     node _product_result_T = mul(scalar, exponentiatial_accumulator) @[Taylor.scala 251:31]
-    node _product_result_T_1 = shr(_product_result_T, 10) @[Taylor.scala 251:61]
+    node _product_result_T_1 = shr(_product_result_T, 20) @[Taylor.scala 251:61]
     product_result <= _product_result_T_1 @[Taylor.scala 251:20]
     node _exponential_accumulator_output_T = mul(exponentiatial_accumulator, processed_input) @[Taylor.scala 252:67]
-    node _exponential_accumulator_output_T_1 = shr(_exponential_accumulator_output_T, 10) @[Taylor.scala 252:86]
+    node _exponential_accumulator_output_T_1 = shr(_exponential_accumulator_output_T, 20) @[Taylor.scala 252:86]
     exponential_accumulator_output <= _exponential_accumulator_output_T_1 @[Taylor.scala 252:36]
     io.output <= product_accumulator @[Taylor.scala 253:15]
     when io.initialize : @[Taylor.scala 255:26]
       processed_input <= io.xa @[Taylor.scala 256:25]
-      exponentiatial_accumulator <= asSInt(UInt<12>("h400")) @[Taylor.scala 257:36]
+      exponentiatial_accumulator <= asSInt(UInt<22>("h100000")) @[Taylor.scala 257:36]
       scalar <= io.mrn @[Taylor.scala 258:16]
       product_accumulator <= asSInt(UInt<1>("h0")) @[Taylor.scala 259:29]
     else :
@@ -331,7 +287,7 @@ circuit UFSPT :
   module UFSPT :
     input clock : Clock
     input reset : UInt<1>
-    output io : { flip input : SInt<15>, flip input_valid : UInt<1>, output : SInt<15>, output_valid : UInt<1>, input_ready : UInt<1>, dbg_state : UInt<3>, dbg_init : UInt<1>, dbg_comp : UInt<1>, dbg_idx : UInt<2>}
+    output io : { flip input : SInt<25>, flip input_valid : UInt<1>, output : SInt<25>, output_valid : UInt<1>, input_ready : UInt<1>, dbg_state : UInt<3>, dbg_init : UInt<1>, dbg_comp : UInt<1>, dbg_idx : UInt<2>}
 
     reg current_state : UInt<2>, clock with :
       reset => (reset, UInt<2>("h0")) @[Taylor.scala 292:38]
@@ -345,8 +301,8 @@ circuit UFSPT :
       reset => (reset, UInt<1>("h1")) @[Taylor.scala 299:40]
     reg output_valid_reg : UInt<1>, clock with :
       reset => (reset, UInt<1>("h0")) @[Taylor.scala 300:41]
-    reg input_reg : SInt<15>, clock with :
-      reset => (reset, asSInt(UInt<15>("h0"))) @[Taylor.scala 301:34]
+    reg input_reg : SInt<25>, clock with :
+      reset => (reset, asSInt(UInt<25>("h0"))) @[Taylor.scala 301:34]
     reg m_order_idx : UInt<2>, clock with :
       reset => (reset, UInt<2>("h0")) @[Taylor.scala 302:36]
     reg m_order_max : UInt<2>, clock with :
